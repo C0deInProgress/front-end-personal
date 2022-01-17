@@ -12,23 +12,24 @@ const useStyles = makeStyles((theme) => ({
   button: {
     width: '100%',
   },
-  buttonsNav:{
+  buttonsNav: {
     borderBottom: 'inset',
     color: 'secondary',
     fontSize: 10,
     borderRadius: 10,
   },
-  fonte:{
-    
+  fonte: {
+
   }
 }));
 
 const options = [
-  { id: 1, name: 'Novo Aluno', action: '/Register'},
-  { id: 2, name: 'Novo Treino', action: '/newTraining'},
-  { id: 3, name: 'Novo Exercício', action: '/newExercises'},
-  { id: 4, name: 'Todos os Exercícios', action: '/allExercises'},
-  { id: 5, name: 'Plano de Treino', action: '/TrainingPlan'}
+  { id: 0, name: 'Home', action: '/' },
+  { id: 1, name: 'Novo Aluno', action: '/Register' },
+  { id: 2, name: 'Novo Treino', action: '/newTraining' },
+  { id: 3, name: 'Novo Exercício', action: '/newExercises' },
+  { id: 4, name: 'Todos os Exercícios', action: '/allExercises' },
+  { id: 5, name: 'Plano de Treino', action: '/TrainingPlan' }
 ]
 
 function NavBar() {
@@ -39,7 +40,7 @@ function NavBar() {
         options.map((item) => (
           <ListItem className={classes.buttonsNav} button key={`item-${item.id}-${item.name}`}>
             <Button href={`${item.action}`}>
-              <ListItemText className={classes.fonte} primary={`${item.name}`}/>
+              <ListItemText className={classes.fonte} primary={`${item.name}`} />
             </Button>
           </ListItem>
         ))
